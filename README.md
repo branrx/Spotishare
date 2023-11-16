@@ -1,5 +1,5 @@
 # Spotishare
-Simple program that automates the process of adding tracks to a ==Spotify== playlist.
+Simple program that automates the process of adding tracks to a **Spotify** playlist.
 
 ###  Motivation
 There is this girl that I work with, we kind of like the same type of music and I like her maybe. Mostly, songs that you would'nt play on auxillary lol. Problem is we cannot share playlists because we use different platforms to stream music. I have over 5000 songs on my computer and there is no way I could add them one by one to a Spotify playlist. Ergo I made this program so it can automatically compile all the files I have locally and add them to a spotify playlist. This way we can collaborate on each other's playlists and fall in love, maybe, I hope so though lol.
