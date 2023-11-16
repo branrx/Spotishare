@@ -14,7 +14,8 @@ It uses tracks on the users local computer, grabs the attributes (artist name, t
 -  [music-tag](https://pypi.org/project/music-tag/)
 -  [requests](https://pypi.org/project/requests/)
 
-###  Work-Flow
+###  How to use
+*  Run spotishare_driver.py
 *  Create a new playlist or use an existing one
     *  Provide name and description for the playlist
 ```      
