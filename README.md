@@ -14,9 +14,12 @@ It uses tracks on the users local computer, grabs the attributes (artist name, t
 -  [music-tag](https://pypi.org/project/music-tag/)
 -  [requests](https://pypi.org/project/requests/)
 
-###  Flow
+###  Work-Flow
 *  Create a new playlist or use an existing one
-    *  Provide name for the playlist
+    *  Provide name and description for the playlist
+      > Do you want to create a new playlist y/n?:
+      > 'Enter a name for your playlist: '
+      > 'Enter a description for your playlist: '
 *  Provide directory path where your audio files are located
 *  It provides you with a link to sign in to your spotify.
     *  Open the link in your browser  
