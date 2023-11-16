@@ -21,16 +21,25 @@ It uses tracks on the users local computer, grabs the attributes (artist name, t
 Do you want to create a new playlist y/n?:
 ```
 ```
-'Enter a name for your playlist: '
+Enter a name for your playlist:
 ```
 ```
-'Enter a description for your playlist: '
+Enter a description for your playlist:
 ```
 *  Provide directory path where your audio files are located
+```
+Enter local music directory path ( Format: e.g S:\Music ): 
+```
 *  It provides you with a link to sign in to your spotify.
-    *  Open the link in your browser  
+    *  Open the link in your browser
+     ```
+     Please open this Url: \n {codeUrl}
+     ```
     *  Then grant access
     *  Then copy the url that's provided on the local host link
     *  Paste that url in console input
+    ```
+    Please enter url acquired: 
+    ```
 *   Program then compiles all your files, searches the tracks and adds them to the spotify playlist
 *   Receipt file .txt contains all tracks that were added to the playlist, and the filename of the receipt file is the name of the playlist.
