@@ -33,7 +33,7 @@ Enter local music directory path ( Format: e.g S:\Music ):
 *  It provides you with a link to sign in to your spotify.
     *  Open the link in your browser
      ```
-     Please open this Url: \n {codeUrl}
+     Please open this Url: url
      ```
     *  Then grant access
     *  Then copy the url that's provided on the local host link
