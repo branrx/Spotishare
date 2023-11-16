@@ -1,20 +1,20 @@
-### Spotishare
+# Spotishare
 Simple program that automates the process of adding tracks to a spotify playlist.
 
-##  Motivation
+###  Motivation
 There is this girl that I work with, we kind of like the same type of music. Mostly, songs that would'nt play on auxillary LOL. Problem is we cannot share playlists because we use different platforms to stream music. I have over 5000 songs on my computer and there is no way I could add them one by one to a Spotify playlist. Ergo I made this program so it can automatically compile all the files I have locally and add them to a spotify.
 
-##  How it works
+###  How it works
 It uses tracks on the users local computer, grabs the attributes (artist name, title). Uses that information to search for the particular song on spotify. Then creates a playlist a playlist where all the tracks are added.
 
-##  Technologies used
+###  Technologies used
 - Spotify API
 
-##  External Modules 
+###  External Modules 
 -  [music-tag](https://pypi.org/project/music-tag/)
 -  [requests](https://pypi.org/project/requests/)
 
-##  Flow
+###  Flow
 *  Create a new playlist or use an existing one
     *  Provide name for the playlist
 *  Provide directory path where your audio files are located
