@@ -1,5 +1,4 @@
 import requests as req
-import json
 import parse_token
 
 def getAll(trackObj):

@@ -1,4 +1,7 @@
-print('WELCOME TO SPOTISHARE')
+import os
+os.system('cls')
+
+print('Spotishare v1.0 \nMade by Brandon Simoko')
 print('This program is designed to create playlists on spotify using songs available locally on your computer.')
 
 import spotishare
@@ -11,28 +14,28 @@ import os
 spotishareObj = spotishare.Spotishare()
 
 #   Get playlist name
-createPlaylist = input('Do you want to create a new playlist y/n?: ')
+createPlaylist = input('\nDo you want to create a new playlist y/n?: ')
 
 if(createPlaylist=='y'):
-    playlistName = input('Enter a name for your playlist: ')
-    description = input('Enter a description for your playlist: ')
+    playlistName = input('\nEnter a name for your playlist: ')
+    description = input('\nEnter a description for your playlist: ')
 
     #   Create playlist
-    print('Creating playlist...')
+    print('\nCreating playlist...')
     spotishareObj.createPlaylist(playlistName, description)
 else:
     playlistName = 'For you'
 
 #   Get local directory containing the audio files to add to the playlist
-path = input('Enter local music directory path ( Format: e.g S:\Music ): ')
+path = input('\nEnter local music directory path ( Format: e.g S:\Music ): ')
 
 #   Get code url, for authentication
 #   Make token request
 codeUrl = easy_auth.requestCode()
-print(f'1. Please open this Url: \n {codeUrl}')
+print(f'\nPlease open this Url: \n {codeUrl}')
 
 #   User authentication
-rawToken = input('\n2. Please enter url acquired: ')
+rawToken = input('\nPlease enter url acquired: ')
 spotishareObj.token = parse_token.parseToken(rawToken = rawToken)
 
 print('\nToken successfully acquired.')
@@ -41,7 +44,7 @@ print('\nToken successfully acquired.')
 receipt = open(f'{playlistName}.txt', 'a')
 
 #   Compile all music files found in provided directory
-print('Compiling music files.')
+print('\nCompiling music files.')
 localFiles = song_scrapper.getFiles(path=path)
 
 #   Search all songs on spotify, then add to playlist
