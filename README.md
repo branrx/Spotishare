@@ -17,9 +17,15 @@ It uses tracks on the users local computer, grabs the attributes (artist name, t
 ###  Work-Flow
 *  Create a new playlist or use an existing one
     *  Provide name and description for the playlist
-      > Do you want to create a new playlist y/n?:
-      > 'Enter a name for your playlist: '
-      > 'Enter a description for your playlist: '
+```      
+Do you want to create a new playlist y/n?:
+```
+```
+'Enter a name for your playlist: '
+```
+```
+'Enter a description for your playlist: '
+```
 *  Provide directory path where your audio files are located
 *  It provides you with a link to sign in to your spotify.
     *  Open the link in your browser  
