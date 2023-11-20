@@ -12,13 +12,13 @@ class Spotishare:
         userId = 'c632ab8cff854da09c7f1d9b2bb93b65'
 
         #   Files path
-        self.path = 'S:\Music\sync test'
+        self.path = ''
 
         #   API variables
         self.playlistEndpoint = f'https://api.spotify.com/v1/me/playlists'
 
         #   Playlist id
-        self.playlistId = '1uZpqhubazTSySaan9L7Wx'
+        self.playlistId = ''
 
         #   Token string
         self.token = ''
@@ -43,6 +43,15 @@ class Spotishare:
 
         if(post.status_code==201):
             print('Playlist created.')
+
+            #   Save playlist name and id to file
+            f = open("playlists.txt", "+a")
+            f.write("\n")
+            f.write(f'{name}:{post.json()['id']}')
+            f.close()
+
+            print(f'playlist id: {post.json()['id']}')
+            self.playlistId = post.json()['id']
         else:
             print(f'Failed to create playlist. {post.text}')
     
@@ -126,4 +135,4 @@ class Spotishare:
 
             time.sleep(1)
         
-        #self.addToPlaylist(trackIDs=trackIDs, playlistId='1uZpqhubazTSySaan9L7Wx')
+        self.addToPlaylist(trackIDs=trackIDs, playlistId=self.playlistId)

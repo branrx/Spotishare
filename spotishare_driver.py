@@ -1,4 +1,5 @@
 import os
+import get_resources
 os.system('cls')
 
 print('Spotishare v1.0 \nMade by Brandon Simoko')
@@ -13,32 +14,41 @@ import os
 #   Create spotishare object
 spotishareObj = spotishare.Spotishare()
 
-#   Get playlist name
-createPlaylist = input('\nDo you want to create a new playlist y/n?: ')
+#   Get token status
+spotishareObj.token = get_resources.verifyToken()
 
-if(createPlaylist=='y'):
+if spotishareObj.token=='expired':
+    #   Get code url, for authentication
+    #   Make token request
+    codeUrl = easy_auth.requestCode()
+    print(f'\nPlease open this Url: \n {codeUrl}')
+
+    #   User authentication
+    rawToken = input('\nPlease enter url acquired: ')
+    spotishareObj.token = parse_token.parseToken(rawToken = rawToken)
+    get_resources.saveToken(spotishareObj.token)
+else:
+    #   Grab token from file
+    spotishareObj.token = spotishareObj.token
+
+print('Token successfully acquired.')
+
+#   Select playlist
+playlist = get_resources.playlistMenu()
+
+if(playlist.split(':')[0]=='new'):
     playlistName = input('\nEnter a name for your playlist: ')
     description = input('\nEnter a description for your playlist: ')
 
-    #   Create playlist
+    #   Create playlistcls
     print('\nCreating playlist...')
     spotishareObj.createPlaylist(playlistName, description)
 else:
-    playlistName = 'For you'
+    playlistName = playlist.split(':')[0]
+    spotishareObj.playlistId = playlist.split(':')[1]
 
 #   Get local directory containing the audio files to add to the playlist
 path = input('\nEnter local music directory path ( Format: e.g S:\Music ): ')
-
-#   Get code url, for authentication
-#   Make token request
-codeUrl = easy_auth.requestCode()
-print(f'\nPlease open this Url: \n {codeUrl}')
-
-#   User authentication
-rawToken = input('\nPlease enter url acquired: ')
-spotishareObj.token = parse_token.parseToken(rawToken = rawToken)
-
-print('\nToken successfully acquired.')
 
 #   Create receipt, named after the playlist, stores records of songs added to the playlist
 receipt = open(f'{playlistName}.txt', 'a')
