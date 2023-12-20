@@ -4,7 +4,7 @@ import base64
 
 def requestCode() -> str:
 
-  name = "brandonlikescoffeeandcoffeetastesnicebrandonlikescoffee"
+  name = ""
   hashedName = hashlib.sha256(name.encode('utf8'))
   hashInBase = base64.b64encode(hashedName.digest()).decode
 
