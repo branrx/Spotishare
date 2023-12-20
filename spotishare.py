@@ -9,7 +9,7 @@ import time
 class Spotishare:
     def __init__(self) -> None:
         #   User ID
-        userId = 'c632ab8cff854da09c7f1d9b2bb93b65'
+        userId = ''
 
         #   Files path
         self.path = ''
