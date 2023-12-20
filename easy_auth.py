@@ -9,7 +9,7 @@ def requestCode() -> str:
   hashInBase = base64.b64encode(hashedName.digest()).decode
 
   #   client
-  clientId = 'c632ab8cff854da09c7f1d9b2bb93b65'
+  clientId = ''
   redirectUri = 'http://localhost:8080/' 
   url = 'https://accounts.spotify.com/authorize'
 
