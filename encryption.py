@@ -2,12 +2,12 @@ import hashlib
 import requests as req
 import base64
 
-name = "brandonlikescoffeeandcoffeetastesnicebrandonlikescoffee"
+name = ""
 hashedName = hashlib.sha256(name.encode('utf8'))
 hashInBase = base64.b64encode(hashedName.digest()).decode
 
 #   client
-clientId = 'c632ab8cff854da09c7f1d9b2bb93b65'
+clientId = ''
 redirectUri = 'http://localhost:8080/' 
 
 #   prepare url
